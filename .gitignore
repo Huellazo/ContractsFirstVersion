@@ -1,0 +1,70 @@
+# -----------------------------------------------------------------------------
+# Anchor / Solana
+# -----------------------------------------------------------------------------
+.anchor
+**/target
+test-ledger
+**/*.rs.bk
+*.so
+
+# Program deploy keypairs (NEVER commit private keys)
+target/deploy/*-keypair.json
+target/deploy/*-upgrade-buffer.json
+**/*-keypair.json
+**/*.keypair.json
+
+# SurfPool local simnet logs/cache
+.surfpool
+
+# -----------------------------------------------------------------------------
+# Node / Frontend (app/)
+# -----------------------------------------------------------------------------
+node_modules
+.yarn
+.pnp.*
+.pnpm-debug.log*
+.parcel-cache
+dist
+build
+.next
+.nuxt
+out
+coverage
+
+# -----------------------------------------------------------------------------
+# Environment & secrets
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.secret
+*.seed
+*.mnemonic
+
+# txtx signer files may reference local keypairs or be edited to contain secrets.
+# Keep templates (e.g. signers.devnet.tx.example) in the repo instead.
+runbooks/**/signers.*.tx
+
+# -----------------------------------------------------------------------------
+# Logs
+# -----------------------------------------------------------------------------
+*.log
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -----------------------------------------------------------------------------
+# IDEs & editors
+# -----------------------------------------------------------------------------
+.idea
+.vscode
+*.swp
+*.swo
+*~
+
+# -----------------------------------------------------------------------------
+# OS
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
