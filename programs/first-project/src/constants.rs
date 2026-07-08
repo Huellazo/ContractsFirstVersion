@@ -1,10 +1,22 @@
-use anchor_lang::prelude::*;
+pub const CONFIG_SEED: &[u8] = b"config";
+pub const PASSPORT_SEED: &[u8] = b"passport";
+pub const TOURIST_SPOT_SEED: &[u8] = b"tourist_spot";
+pub const GEO_ACHIEVEMENT_SEED: &[u8] = b"geo_ach";
+pub const BUSINESS_SEED: &[u8] = b"business";
+pub const BUSINESS_MISSION_SEED: &[u8] = b"biz_mission";
+pub const BUSINESS_PROGRESS_SEED: &[u8] = b"biz_progress";
+pub const BUSINESS_CHECKIN_SEED: &[u8] = b"biz_checkin";
+pub const DISCOUNT_SEED: &[u8] = b"discount";
 
-#[constant]
-pub const COUNTER_SEED: &[u8] = b"counter";
-
-#[constant]
-pub const HELLO_WORLD_LAMPORTS: u64 = 1;
-
-#[constant]
-pub const MAX_COUNT: u64 = 10;
+pub const MAX_TARGET_BUSINESSES: usize = 10;
+pub const MAX_NAME_LEN: usize = 64;
+pub const MAX_CODE_LEN: usize = 32;
+pub const MAX_URI_LEN: usize = 128;
+pub const XP_PER_LEVEL: u64 = 1_000;
+pub const SHARE_BONUS_BPS: u64 = 1_000; // 10% -> baseline * 1000 / 10000
+pub const BPS_DENOMINATOR: u64 = 10_000;
+pub const RATING_MIN: u8 = 1;
+pub const RATING_MAX: u8 = 5;
+pub const SPOT_XP_DEFAULT: u64 = 1_000;
+pub const BUSINESS_XP_DEFAULT: u64 = 100;
+pub const MISSION_BONUS_XP: u64 = 500;

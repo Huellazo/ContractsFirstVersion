@@ -1249,6 +1249,7 @@ name = "first-project"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
+ "ed25519-dalek",
  "litesvm",
  "solana-keypair",
  "solana-message",
